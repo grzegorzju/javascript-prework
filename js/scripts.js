@@ -1,7 +1,5 @@
-var argMoveId, argPlayerMove, argComputerMove, computerMove, playerMove, randomNumber, playerInput;
-
 function getMoveName(argMoveId) {
-  console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
+  let argMoveId;
   if (argMoveId == 1) {
     return 'kamień';
   } else if (argMoveId == 2) {
@@ -15,7 +13,7 @@ function getMoveName(argMoveId) {
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
-  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
+  let argPlayerMove,argComputerMove;
   if (argPlayerMove == argComputerMove) {
 	printMessage('Remis!');
   } else if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
@@ -31,12 +29,12 @@ function displayResult(argPlayerMove, argComputerMove) {
 }
 
 function randomCompReaction(){
-	return randomNumber = Math.floor(Math.random() * 3 + 1);
+	return Math.floor(Math.random() * 3 + 1);
 }
 
 function buttonClicked(argButtonId) {
-  var argPlayerMove = getMoveName(argButtonId);
-  var argComputerMove = getMoveName(randomCompReaction());
+  let argPlayerMove = getMoveName(argButtonId);
+  let argComputerMove = getMoveName(randomCompReaction());
   displayResult(argPlayerMove, argComputerMove);
 }
 
